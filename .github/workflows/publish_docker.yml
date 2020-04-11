@@ -11,3 +11,5 @@ jobs:
         name: maehr/janus-gateway
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        context: src
+        tag_semver: true
