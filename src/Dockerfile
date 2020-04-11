@@ -61,10 +61,6 @@ RUN ./configure --prefix=/opt/janus --disable-boringssl
 RUN make && make install
 RUN make configs
 
-WORKDIR /opt/janus/etc/janus/
-
-COPY conf .
-
 WORKDIR /usr/janus-gateway
 
 CMD ./janus
