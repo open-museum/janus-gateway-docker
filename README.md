@@ -2,12 +2,12 @@
 
 Docker for [Janus](https://janus.conf.meetecho.com/), the general purpose WebRTC server.
 
+[<img src="android-chrome-512x512.png" align="right" width="100">](https://open-museum.github.io/janus-gateway-docker/)
+
 [![GitHub issues](https://img.shields.io/github/issues/open-museum/janus-gateway-docker.svg)](https://github.com/open-museum/janus-gateway-docker/issues)
 [![GitHub forks](https://img.shields.io/github/forks/open-museum/janus-gateway-docker.svg)](https://github.com/open-museum/janus-gateway-docker/network)
 [![GitHub stars](https://img.shields.io/github/stars/open-museum/janus-gateway-docker.svg)](https://github.com/open-museum/janus-gateway-docker/stargazers)
 [![GitHub license](https://img.shields.io/github/license/open-museum/janus-gateway-docker.svg)](https://github.com/open-museum/janus-gateway-docker/blob/master/LICENSE.md)
-
-[<img src="android-chrome-512x512.png" align="right" width="100">](https://open-museum.github.io/janus-gateway-docker/)
 
 ## Installation
 
