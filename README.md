@@ -11,23 +11,39 @@ Docker for [Janus](https://janus.conf.meetecho.com/), the general purpose WebRTC
 
 ## Installation
 
-Edit `/src/conf/janus.jcfg` to your liking. Take special care to enable/disable the plugins:
+Create certificates in `/data/certificates/`.
 
-```text
-# You can choose which of the available plugins should be
-# enabled or not. Use the 'disable' directive to prevent Janus from
-# loading one or more plugins: use a comma separated list of plugin file
-# names to identify the plugins to disable. By default all available
-# plugins are enabled and loaded at startup.
-plugins: {
-	#disable = "libjanus_voicemail.so,libjanus_recordplay.so"
-	disable = "libjanus_nosip.so,libjanus_recordplay.so,libjanus_sip.so,libjanus_streaming.so,libjanus_textroom.so,libjanus_videocall.so,libjanus_videoroom.so,libjanus_voicemail.so"
-````
+Copy the config files in `/data/conf/`.
+
+```bash
+cp janus.eventhandler.sampleevh.jcfg.sample janus.eventhandler.sampleevh.jcfg
+cp janus.eventhandler.wsevh.jcfg.sample janus.eventhandler.wsevh.jcfg
+cp janus.jcfg.sample janus.jcfg
+cp janus.plugin.audiobridge.jcfg.sample janus.plugin.audiobridge.jcfg
+cp janus.plugin.echotest.jcfg.sample janus.plugin.echotest.jcfg
+cp janus.plugin.nosip.jcfg.sample janus.plugin.nosip.jcfg
+cp janus.plugin.recordplay.jcfg.sample janus.plugin.recordplay.jcfg
+cp janus.plugin.sip.jcfg.sample janus.plugin.sip.jcfg
+cp janus.plugin.streaming.jcfg.sample janus.plugin.streaming.jcfg
+cp janus.plugin.textroom.jcfg.sample janus.plugin.textroom.jcfg
+cp janus.plugin.videocall.jcfg.sample janus.plugin.videocall.jcfg
+cp janus.plugin.videoroom.jcfg.sample janus.plugin.videoroom.jcfg
+cp janus.plugin.voicemail.jcfg.sample janus.plugin.voicemail.jcfg
+cp janus.transport.http.jcfg.sample janus.transport.http.jcfg
+cp janus.transport.pfunix.jcfg.sample janus.transport.pfunix.jcfg
+cp janus.transport.websockets.jcfg.sample janus.transport.websockets.jcfg
+```
+
+Edit the files:
+
+* Enable secure transport protocols in `janus.jcfg`, `janus.transport.http.jcfg` and `janus.transport.websockets.jcfg` and set `cert_pem = "/usr/share/certificates/cert.pem"`and `cert_key = "/usr/share/certificates/key.pem"`
+* Set `stun_server = "stun.l.google.com"`and `stun_port = 19302` in `janus.jcfg`
+* Disable unused plugins in `janus.jcfg`
 
 Use [Docker](https://www.docker.com/) to build the image.
 
 ```bash
-docker build -t openmuseum/janus-gateway-docker ./src/.
+docker build -t openmuseum/janus-gateway-docker src/.
 ```
 
 ## Usage
