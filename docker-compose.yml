@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  janus-gateway:
+    container_name: janus-gateway
+    image: openmuseum/janus-gateway-docker:latest
+    # port mapping HOST:CONTAINER
+    ports:
+      # http
+      - 8088:8088
+      # https
+      - 8089:8089
+      # ws
+      - 8188:8188
+      # wss
+      - 8989:8989
+    restart: unless-stopped
