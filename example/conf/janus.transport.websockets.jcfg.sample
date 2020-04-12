@@ -39,7 +39,7 @@ admin: {
 
 # Certificate and key to use for any secure WebSocket server, if enabled (and passphrase if needed).
 certificates: {
-	#cert_pem = "/path/to/cert.pem"
-	#cert_key = "/path/to/key.pem"
+	#cert_pem = "/usr/share/certificates/cert.pem"
+	#cert_key = "/usr/share/certificates/key.pem"
 	#cert_pwd = "secretpassphrase"
 }
