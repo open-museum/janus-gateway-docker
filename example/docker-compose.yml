@@ -3,9 +3,7 @@ version: "3"
 services:
   janus-gateway:
     container_name: janus-gateway
-    #image: openmuseum/janus-gateway-docker:latest
-    build: 
-      context: src
+    build: .
     ports:
       # http
       - 8088:8088
@@ -16,6 +14,3 @@ services:
       # wss
       - 8989:8989
     restart: unless-stopped
-    volumes: 
-      - ./data/conf:/opt/janus/etc/janus/
-      - ./data/certificates:/usr/share/certificates/

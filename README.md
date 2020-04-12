@@ -11,11 +11,12 @@ Docker for [Janus](https://janus.conf.meetecho.com/), the general purpose WebRTC
 
 ## Installation
 
-Create certificates in `/data/certificates/`.
+Create certificates in `/example/certificates/`.
 
-Copy the config files in `/data/conf/`.
+Copy the config files in `/example/conf/`.
 
 ```bash
+cd example/conf/
 cp janus.eventhandler.sampleevh.jcfg.sample janus.eventhandler.sampleevh.jcfg
 cp janus.eventhandler.wsevh.jcfg.sample janus.eventhandler.wsevh.jcfg
 cp janus.jcfg.sample janus.jcfg
@@ -43,12 +44,14 @@ Edit the files:
 Use [Docker](https://www.docker.com/) to build the image.
 
 ```bash
-docker build -t openmuseum/janus-gateway-docker src/.
+cd example
+docker build .
 ```
 
 ## Usage
 
 ```bash
+cd example
 docker-compose up -d
 ```
 
