@@ -60,7 +60,3 @@ RUN ./autogen.sh
 RUN ./configure --prefix=/opt/janus --disable-boringssl
 RUN make && make install
 RUN make configs
-
-WORKDIR /usr/janus-gateway
-
-CMD ./janus
