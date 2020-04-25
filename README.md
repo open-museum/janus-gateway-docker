@@ -1,6 +1,6 @@
 # Janus Gateway Docker
 
-[Janus](https://janus.conf.meetecho.com/) the general purpose WebRTC server for Docker.
+[Janus](https://janus.conf.meetecho.com/) the general purpose WebRTC server.
 
 [<img src="android-chrome-512x512.png" align="right" width="100">](https://open-museum.github.io/janus-gateway-docker/)
 
