@@ -31,7 +31,14 @@ RUN apt install --no-install-recommends --no-install-suggests -y \
     gnupg1 \
     gtk-doc-tools \
     wget
+
+RUN apt install python3 \
+    python3-pip \
+    python3-setuptools \
+    python3-wheel ninja-build
     
+RUN pip3 install meson
+
 RUN apt remove libnice-dev
 
 WORKDIR /usr
