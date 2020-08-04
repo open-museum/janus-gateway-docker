@@ -45,7 +45,7 @@ RUN apt remove libnice-dev
 WORKDIR /usr
 RUN git clone https://gitlab.freedesktop.org/libnice/libnice.git
 WORKDIR /usr/libnice
-RUN meson --prefix=/usr build && ninja -C build && sudo ninja -C build install
+RUN meson --prefix=/usr build && ninja -C build && ninja -C build install
 
 WORKDIR /usr
 RUN wget https://github.com/cisco/libsrtp/archive/v2.2.0.tar.gz
