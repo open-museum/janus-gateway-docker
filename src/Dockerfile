@@ -32,7 +32,8 @@ RUN apt install --no-install-recommends --no-install-suggests -y \
     gtk-doc-tools \
     wget
 
-RUN apt install python3 \
+RUN apt install --no-install-recommends --no-install-suggests -y \
+    python3 \
     python3-pip \
     python3-setuptools \
     python3-wheel ninja-build
