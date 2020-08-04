@@ -10,6 +10,7 @@ RUN apt install --no-install-recommends --no-install-suggests -y \
     libmicrohttpd-dev \
     libjansson-dev \
     libssl-dev \
+    libsrtp-dev \
     libsofia-sip-ua-dev \
     libglib2.0-dev \ 
     libopus-dev \
@@ -30,13 +31,13 @@ RUN apt install --no-install-recommends --no-install-suggests -y \
     gnupg1 \
     gtk-doc-tools \
     wget
+    
+RUN apt remove libnice-dev
 
 WORKDIR /usr
 RUN git clone https://gitlab.freedesktop.org/libnice/libnice.git
 WORKDIR /usr/libnice
-RUN ./autogen.sh
-RUN ./configure --prefix=/usr
-RUN make && make install
+RUN meson --prefix=/usr build && ninja -C build && sudo ninja -C build install
 
 WORKDIR /usr
 RUN wget https://github.com/cisco/libsrtp/archive/v2.2.0.tar.gz
@@ -56,7 +57,7 @@ RUN make && make install
 WORKDIR /usr
 RUN git clone https://github.com/meetecho/janus-gateway.git
 WORKDIR /usr/janus-gateway
-RUN git checkout tags/v0.9.3
+RUN git checkout tags/v0.10.3
 RUN ./autogen.sh
 RUN ./configure --prefix=/opt/janus --disable-boringssl
 RUN make && make install
