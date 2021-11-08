@@ -25,11 +25,13 @@ RUN apt install --no-install-recommends --no-install-suggests -y \
 
 RUN apt install --no-install-recommends --no-install-suggests -y \
     apt-transport-https \
+    build-essential \
     ca-certificates \
     cmake \
     git \
     gnupg1 \
     gtk-doc-tools \
+    make \
     wget
 
 RUN apt install --no-install-recommends --no-install-suggests -y \
