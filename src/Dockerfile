@@ -10,7 +10,7 @@ RUN apt install --no-install-recommends --no-install-suggests -y \
     libmicrohttpd-dev \
     libjansson-dev \
     libssl-dev \
-    libsrtp-dev \
+    libsrtp2-dev \
     libsofia-sip-ua-dev \
     libglib2.0-dev \ 
     libopus-dev \
