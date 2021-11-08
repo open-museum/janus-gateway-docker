@@ -65,7 +65,7 @@ RUN make && make install
 WORKDIR /usr
 RUN git clone https://github.com/meetecho/janus-gateway.git
 WORKDIR /usr/janus-gateway
-RUN git checkout tags/v0.10.8
+RUN git checkout tags/v0.11.5
 RUN ./autogen.sh
 RUN ./configure --prefix=/opt/janus --disable-boringssl
 RUN make && make install
