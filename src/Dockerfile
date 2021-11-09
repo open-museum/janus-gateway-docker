@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 LABEL maintainer="Moritz Mähr <moritz.maehr@gmail.com>"
 
@@ -10,7 +10,7 @@ RUN apt install --no-install-recommends --no-install-suggests -y \
     libmicrohttpd-dev \
     libjansson-dev \
     libssl-dev \
-    libsrtp2-dev \
+    libsrtp-dev \
     libsofia-sip-ua-dev \
     libglib2.0-dev \ 
     libopus-dev \
