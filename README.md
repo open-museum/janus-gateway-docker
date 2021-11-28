@@ -1,5 +1,7 @@
 # [Janus Gateway Docker](https://github.com/open-museum/janus-gateway-docker/)
 
+> ⚠️ This repository is outdated and has been archived. 
+
 [Janus](https://janus.conf.meetecho.com/) the general purpose WebRTC server.
 
 [<img src="android-chrome-512x512.png" align="right" width="100">](https://open-museum.github.io/janus-gateway-docker/)
